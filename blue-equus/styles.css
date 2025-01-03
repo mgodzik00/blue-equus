@@ -39,7 +39,24 @@ html {
     height: auto;
 }
 
+/* Add the media query at the end of the file */
+@media (max-width: 500px) {
+   main, aside {
+       display: block;
+       width: 100%;
+   }
+
+   .main-column-1 {
+       flex-direction: column;
+   }
+
+   .main-column-1-text, #main-column-1-img {
+       width: 100%;
+   }
+}
+
 /* Header Text Over Image */
+
 
 #header-image-logo-text {
    text-align: center;
@@ -51,15 +68,6 @@ html {
    font-size: 7vw;
 }
 
-.header-nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
-    background-color: #000000;
-    padding: 0px;
-    margin: 0 0 0 0;
-}
 
 
 .header-nav-list {
@@ -106,16 +114,25 @@ html {
    color: black;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-   .navbar-nav {
-       flex-direction: column;
-   }
-.main-column-1 {
+
+.main-content-column {
    display: flex;
    flex-direction: row;
    height: auto;
 }
+
+/* Add media query for responsive design on medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+   .main-content-column, .aside-column {
+      flex-direction: column;
+      width: 100%;
+   }
+
+   .main-column-1-text, #main-column-1-img, .aside-column-1-img, .aside-column-2 {
+      width: 100%;
+   }
+}
+
 
 .main-column-1-text {
    width: 55%;
